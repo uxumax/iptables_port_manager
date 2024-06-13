@@ -40,9 +40,15 @@ echo "2222" >> /tmp/ports_to_open.list
 
 The service will automatically detect the new port in the list, open it, and close it after a delay.
 
-Better way set 600 privileges to this file but this depends on your case
+Better way set 600 privileges to this file but this depends on your case:
 ```sh
 chmod 600 /tmp/ports_to_open.list
+```
+
+Also you can change path `ports_to_open.list` to any place. 
+Just change `PORTS_FILE` value in `./port_manager.sh` script if before run installation or in `/usr/sbin/port_manager.sh` if already installed:
+```sh
+PORTS_FILE="your/new/better/place/ports_to_open.list"
 ```
 
 ## License
