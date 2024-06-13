@@ -45,11 +45,14 @@ Better way set 600 privileges to this file but this depends on your case:
 chmod 600 /tmp/ports_to_open.list
 ```
 
-Also you can change path `ports_to_open.list` to any place. 
+You can change path `ports_to_open.list` to any place. 
 Just change `PORTS_FILE` value in `./port_manager.sh` script if before run installation or in `/usr/sbin/port_manager.sh` if already installed:
 ```sh
 PORTS_FILE="your/new/better/place/ports_to_open.list"
 ```
+
+## Related projects
+- [ossh](https://github.com/uxumax/ossh) - simple SSH wrapper that allows you to run custom scripts before and after an SSH connection is established. You can open a port by simply adding a command to `~/.ssh/before_installed.sh` that adds the port number to `$PORTS_FILE` on your server.
 
 ## License
 [MIT License](LICENSE)
