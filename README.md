@@ -1,6 +1,6 @@
-# iptables_port_control
+# IPTables Port Manager
 
-`iptables_port_control` is a project that facilitates the dynamic management of port forwarding using iptables and systemd on a Linux system. It is particularly useful for handling a large number of backtunnels from local VMs over NAT to a remote VPS with a public IP, without needing to keep all of them open all the time. The ports are opened only when needed and closed automatically after an SSH connection is established.
+`iptables_port_manager` is a project that facilitates the dynamic management of port forwarding using iptables and systemd on a Linux system. It is particularly useful for handling a large number of backtunnels from local VMs over NAT to a remote VPS with a public IP, without needing to keep all of them open all the time. The ports are opened only when needed and closed automatically after an SSH connection is established.
 
 ## Features
 - Automatically opens and closes ports using iptables.
@@ -16,8 +16,8 @@
 
 1. **Clone the Repository:**
     ```sh
-    git clone https://github.com/yourusername/iptables_port_control.git
-    cd iptables_port_control
+    git clone https://github.com/uxumax/iptables_port_manager.git
+    cd iptables_port_manager
     ```
 
 2. **Run the Installation Script:**
