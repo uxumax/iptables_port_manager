@@ -52,7 +52,7 @@ PORTS_FILE="your/new/better/place/ports_to_open.list"
 ```
 
 ## Related projects
-- [ossh](https://github.com/uxumax/ossh) - simple SSH wrapper that allows you to run custom scripts before and after an SSH connection is established. You can open a port by simply adding a command to `~/.ssh/before_installed.sh` that adds the port number to `$PORTS_FILE` on your server.
+- [ossh](https://github.com/uxumax/ossh) - simple SSH wrapper that allows you to run custom scripts before and after an SSH connection is established. You can open a port by simply adding a command to `~/.ssh/before_established.sh` that adds the port number to `$PORTS_FILE` on your server.
 
 ## License
 [MIT License](LICENSE)
