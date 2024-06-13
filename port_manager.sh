@@ -3,6 +3,8 @@
 # Define files path
 PORTS_FILE="/tmp/ports_to_open.list"
 LOG_FILE="/var/log/port_manager.log"
+OPEN_PORT_DELAY=1  # Check $PORTS_FILE every 1 second
+CLOSE_PORT_DELAY=10  # Close port after opening after 10 seconds
 
 # Ensure the script is run with sudo or root privileges
 if [ "$EUID" -ne 0 ]; then
@@ -25,7 +27,7 @@ open_port() {
 # Function to remove a iptables rule with openned port
 close_port_with_delay() {
   local port=$1
-  sleep 10
+  sleep $CLOSE_PORT_DELAY
   iptables -D INPUT -p tcp --dport "$port" -j ACCEPT
   log "Closed port $port"
 }
@@ -64,7 +66,7 @@ main_loop() {
         # else
         #   log "No ports to open"
         fi
-        sleep 1
+        sleep $OPEN_PORT_DELAY
     done
 }
 
