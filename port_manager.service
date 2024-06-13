@@ -1,0 +1,11 @@
+[Unit]
+Description=Port Manager using iptables
+After=network.target
+
+[Service]
+Type=simple
+ExecStart=/usr/sbin/port_manager.sh
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
