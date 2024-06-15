@@ -8,7 +8,7 @@ if [ "$EUID" -ne 0 ]; then
 fi
 
 # Check if the 'iptables' command exists
-if ! command -v file &> /dev/null; then
+if ! command -v iptables &> /dev/null; then
     echo "Error: 'iptables' command not found"
     exit 1
 fi
