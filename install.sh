@@ -1,8 +1,10 @@
+#!/bin/bash
+
 SYSTEMD_DIR="/etc/systemd/system"
 SBIN_DIR="/usr/sbin"
 
 # Ensure the script is run with sudo or root privileges
-if [ "$EUID" -ne 0 ]; then
+if [[ "$EUID" -ne 0 ]]; then
   echo "Please run as root or use sudo"
   exit
 fi
